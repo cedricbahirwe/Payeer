@@ -42,7 +42,8 @@ struct DashBoardView: View {
                         Text(item.name)
                             .foregroundColor(.secondary)
                         Spacer()
-                        Text("$\(item.amount.description)")
+                        Text(String(format: "$%.2f", item.amount))
+                        
                     }
                     .font(Font.body.weight(.semibold))
                     .padding(.vertical, 10)
@@ -66,6 +67,11 @@ struct MainSearchField: View {
     init(_ placeholder: String, text: Binding<String>) {
         self.placeholder = placeholder
         _text = text
+    }
+    
+    init() {
+        placeholder = "Search for transactions"
+        _text = .constant(placeholder)
     }
     var body: some View {
         HStack {

@@ -100,7 +100,7 @@ struct TransactionRowView: View {
                 Text(transaction.title)
                     .font(Font.callout.weight(.semibold))
                 Spacer()
-                Text("$\(transaction.amount.description)")
+                Text(String(format: "$%.2f", transaction.amount))
                     .foregroundColor(.mainBlue)
             }
             .font(Font.body.weight(.semibold))
