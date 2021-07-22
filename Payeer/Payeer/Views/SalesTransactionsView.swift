@@ -24,7 +24,7 @@ struct Transaction: Identifiable {
 
 struct SalesTransactionsView: View {
     let transactions:[Transaction] = Transaction.examples
-    
+    @Environment(\.presentationMode) private var presentationMode
     @State private var showCalendar = false
     var body: some View {
         
@@ -35,6 +35,9 @@ struct SalesTransactionsView: View {
                     HStack {
                         Image(systemName: "chevron.left")
                             .imageScale(.large)
+                            .onTapGesture {
+                                presentationMode.wrappedValue.dismiss()
+                            }
                         Spacer()
                         Text("Transactions")
                             .font(Font.title3.bold())
@@ -60,33 +63,12 @@ struct SalesTransactionsView: View {
                         ForEach(0..<transactions.count) { index in
                             let transaction = transactions[index]
                             
-                            VStack(spacing: 3) {
-                                HStack {
-                                    Text(transaction.title)
-                                    
-                                    Spacer()
-                                    Text("$\(transaction.amount.description)")
-                                        .foregroundColor(.mainBlue)
-                                }
-                                .font(Font.body.weight(.semibold))
-                                HStack {
-                                    Text(transaction.date, style: .date)
-                                        .font(.callout)
-                                        .fontWeight(.light)
-                                        .foregroundColor(.secondary)
-                                    Spacer()
-                                    
-                                    Text(transaction.reference.prefix(10))
-                                        .foregroundColor(.secondary)
-                                }
-                                
-                            }
-                            .padding(8)
-                            .background(
-                                Color(.secondarySystemBackground)
-                                    .opacity(index % 2 == 0 ? 1 : 0.5)
-                            )
-                            
+                            TransactionRowView(transaction: transaction)
+                                .padding(8)
+                                .background(
+                                    Color(.secondarySystemBackground)
+                                        .opacity(index % 2 == 0 ? 1 : 0.5)
+                                )
                         }
                     }
                 }
@@ -107,5 +89,32 @@ struct SalesTransactionsView: View {
 struct SalesTransactionsView_Previews: PreviewProvider {
     static var previews: some View {
         SalesTransactionsView()
+    }
+}
+
+struct TransactionRowView: View {
+    let transaction: Transaction
+    var body: some View {
+        VStack(spacing: 3) {
+            HStack {
+                Text(transaction.title)
+                    .font(Font.callout.weight(.semibold))
+                Spacer()
+                Text("$\(transaction.amount.description)")
+                    .foregroundColor(.mainBlue)
+            }
+            .font(Font.body.weight(.semibold))
+            HStack {
+                Text(transaction.date, style: .date)
+                    .font(.callout)
+                    .fontWeight(.light)
+                    .foregroundColor(.secondary)
+                Spacer()
+                
+                Text(transaction.reference.prefix(10))
+                    .foregroundColor(.secondary)
+            }
+            
+        }
     }
 }
