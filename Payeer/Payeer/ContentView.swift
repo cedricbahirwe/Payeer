@@ -10,8 +10,30 @@ import SwiftUI
 struct ContentView: View {
 
     var body: some View {
-        HStack {
+        TabView {
+            DashBoardView()
+                .tabItem {
+                    Image(systemName: "speedometer")
+                }
+                .tag(1)
             
+            PaymentMethodsView()
+                .tabItem {
+                    Image(systemName: "list.bullet.rectangle")
+                }
+                .tag(2)
+            
+            LoginView()
+                .tabItem {
+                    Image(systemName: "person.fill")
+                }
+                .tag(3)
+            
+            AddAccountView()
+                .tabItem {
+                    Image(systemName: "creditcard.fill")
+                }
+                .tag(4)
         }
     }
 }

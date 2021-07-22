@@ -42,7 +42,10 @@ struct PaymentMethodsView: View {
     
     private let pmethods = PaymentMethod.examples
     
-    var totalAmount: Double {
+    
+    @Namespace private var animate
+    @State private var showPieGraph = false
+    private var totalAmount: Double {
         pmethods.map(\.amount).reduce(0, +)
     }
     var body: some View {
@@ -61,44 +64,62 @@ struct PaymentMethodsView: View {
                 
             }
             .padding(.horizontal, 10)
-            
             ZStack {
-//                PieChartView(values: pmethods.map(\.amount),
-//                             names: pmethods.map(\.name),
-//                             colors: pmethods.map(\.type).map(\.color)) { _ in }
-//                PieChartView(
-//                    values: [1300, 500, 300],
-//                    names: ["Rent", "Transport", "Education"],
-//                    formatter: {value in String(format: "$%.2f", value)})
-                    .frame(maxWidth: .infinity)
-                    .background(Color.red)
-            }
-            GeometryReader { geo in
-                HStack(spacing: 0) {
-                    ForEach(pmethods) { method in
-                        method.type.color
-                            .frame(width:  geo.size.width * CGFloat(method.amount/totalAmount))
+                if showPieGraph {
+                    
+                    PieChartView(transactions: pmethods) {
+                        String(format: "$%.2f", $0)
                     }
+                    .matchedGeometryEffect(id: "chart", in: animate)
+                    .frame(width: 200, height: 200)
+                    .padding(.vertical)
+                } else {
+                    VStack {
+                    GeometryReader { geo in
+                        HStack(spacing: 0) {
+                            ForEach(pmethods) { method in
+                                method.type.color
+                                    .frame(width:  geo.size.width * CGFloat(method.amount/totalAmount))
+                            }
+                        }
+                    }
+                    .frame(height: 40)
+                    .transition(.scale)
+                    
+                    Text(String(format: "$%.2f", totalAmount))
+                        .font(Font.headline)
+                        .foregroundColor(.white)
+                        .padding(.vertical, 8)
+                        .padding(.horizontal, 20)
+                        .minimumScaleFactor(0.6)
+                        .background(Color.mainBlue)
+                        .clipShape(Capsule())
+                        .padding(.vertical)
+                        .matchedGeometryEffect(id: "chart", in: animate)
+
+                    }
+                    
+
                 }
+                
+                
             }
-            .frame(height: 40)
+            .frame(maxWidth: .infinity)
+            .background(
+                Color(.secondarySystemBackground))
             .overlay(
                 Image(systemName: "chevron.down")
-                    .foregroundColor(.white)
+                    .foregroundColor(showPieGraph ? .secondary :.white)
+                    .rotationEffect(.degrees(showPieGraph ? 180 : 0))
                     .padding(8)
                     .onTapGesture {
-                        
+                        withAnimation(.spring()) {
+                            showPieGraph.toggle()
+                        }
                     }
-                , alignment: .leading
+                , alignment: .topLeading
             )
-            
-            Text(String(format: "$%.2f", totalAmount))
-                .font(Font.headline)
-                .foregroundColor(.white)
-                .padding(.vertical, 8)
-                .padding(.horizontal, 20)
-                .background(Color.mainBlue)
-                .clipShape(Capsule())
+
             ScrollView {
                 VStack(spacing: 0) {
                     ForEach(0..<pmethods.count) { i in
