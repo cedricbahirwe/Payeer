@@ -25,16 +25,8 @@ struct DashBoardView: View {
     ]
     var body: some View {
         VStack(alignment: .leading) {
-            HStack {
-                Image(systemName: "magnifyingglass")
-                
-                TextField("Seach for transactions",
-                          text: .constant("Seach for transactions"))
-            }
-            .foregroundColor(.secondary)
-            .padding(.horizontal, 15)
-            .frame(height: 45)
-            .overlay(Capsule().stroke(Color.secondary))
+            MainSearchField("Seach for transactions",
+                            text: .constant("Seach for transactions"))
             
             Text("Sales Summary")
                 .font(Font.largeTitle.bold())
@@ -56,8 +48,6 @@ struct DashBoardView: View {
                     .padding(.vertical, 10)
                 }
             }
-
-            
         }
         .padding(10)
     }
@@ -66,5 +56,27 @@ struct DashBoardView: View {
 struct DashBoardView_Previews: PreviewProvider {
     static var previews: some View {
         DashBoardView()
+    }
+}
+
+struct MainSearchField: View {
+    
+    let placeholder: String
+    @Binding var text: String
+    init(_ placeholder: String, text: Binding<String>) {
+        self.placeholder = placeholder
+        _text = text
+    }
+    var body: some View {
+        HStack {
+            Image(systemName: "magnifyingglass")
+            
+            TextField(placeholder,
+                      text: $text)
+        }
+        .foregroundColor(.secondary)
+        .padding(.horizontal, 15)
+        .frame(height: 45)
+        .overlay(Capsule().stroke(Color.secondary))
     }
 }
