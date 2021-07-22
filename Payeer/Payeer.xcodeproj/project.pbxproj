@@ -14,6 +14,7 @@
 		8241048A26AA0E2F0034085E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8241048926AA0E2F0034085E /* LoginView.swift */; };
 		8241048D26AA0E4D0034085E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8241048C26AA0E4D0034085E /* Extensions.swift */; };
 		8241048F26AA0E890034085E /* AddAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8241048E26AA0E890034085E /* AddAccountView.swift */; };
+		82E07AD126AA10E4007FF98A /* DashBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E07AD026AA10E4007FF98A /* DashBoardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		8241048926AA0E2F0034085E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		8241048C26AA0E4D0034085E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		8241048E26AA0E890034085E /* AddAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccountView.swift; sourceTree = "<group>"; };
+		82E07AD026AA10E4007FF98A /* DashBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				8241048926AA0E2F0034085E /* LoginView.swift */,
+				82E07AD026AA10E4007FF98A /* DashBoardView.swift */,
 				8241048E26AA0E890034085E /* AddAccountView.swift */,
 			);
 			path = Views;
@@ -158,6 +161,7 @@
 				8241048A26AA0E2F0034085E /* LoginView.swift in Sources */,
 				8241047D26AA06D60034085E /* ContentView.swift in Sources */,
 				8241048F26AA0E890034085E /* AddAccountView.swift in Sources */,
+				82E07AD126AA10E4007FF98A /* DashBoardView.swift in Sources */,
 				8241047B26AA06D60034085E /* PayeerApp.swift in Sources */,
 				8241048D26AA0E4D0034085E /* Extensions.swift in Sources */,
 			);
