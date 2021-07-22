@@ -24,63 +24,81 @@ struct Transaction: Identifiable {
 
 struct SalesTransactionsView: View {
     let transactions:[Transaction] = Transaction.examples
-    var body: some View {
     
-        VStack(spacing: 0) {
-            Group {
-                MainSearchField("Search for transactions", text: .constant("Search for transactions"))
-                HStack {
-                    Image(systemName: "chevron.left")
-                        .imageScale(.large)
-                    Spacer()
-                    Text("Transactions")
-                        .font(Font.title3.bold())
-                        .textCase(.uppercase)
-                        .foregroundColor(.primary)
-                    Spacer()
-                    Image(systemName: "calendar")
+    @State private var showCalendar = false
+    var body: some View {
+        
+        ZStack {
+            VStack(spacing: 0) {
+                Group {
+                    MainSearchField("Search for transactions", text: .constant("Search for transactions"))
+                    HStack {
+                        Image(systemName: "chevron.left")
+                            .imageScale(.large)
+                        Spacer()
+                        Text("Transactions")
+                            .font(Font.title3.bold())
+                            .textCase(.uppercase)
+                            .foregroundColor(.primary)
+                        Spacer()
+                        Image(systemName: "calendar")
+                            .onTapGesture {
+                                withAnimation {
+                                    showCalendar.toggle()
+                                }
+                            }
+                    }
+                    .foregroundColor(.secondary)
+                    .padding(.vertical)
                 }
-                .foregroundColor(.secondary)
-                .padding(.vertical)
-            }
-            .padding(.horizontal, 10)
-
-            Divider()
-            
-            ScrollView {
-                VStack(spacing: 0) {
-                    ForEach(0..<transactions.count) { index in
-                        let transaction = transactions[index]
-                        
-                        VStack(spacing: 0) {
-                            HStack {
-                                Text(transaction.title)
+                .padding(.horizontal, 10)
+                
+                Divider()
+                
+                ScrollView {
+                    VStack(spacing: 0) {
+                        ForEach(0..<transactions.count) { index in
+                            let transaction = transactions[index]
+                            
+                            VStack(spacing: 3) {
+                                HStack {
+                                    Text(transaction.title)
+                                    
+                                    Spacer()
+                                    Text("$\(transaction.amount.description)")
+                                        .foregroundColor(.mainBlue)
+                                }
+                                .font(Font.body.weight(.semibold))
+                                HStack {
+                                    Text(transaction.date, style: .date)
+                                        .font(.callout)
+                                        .fontWeight(.light)
+                                        .foregroundColor(.secondary)
+                                    Spacer()
+                                    
+                                    Text(transaction.reference.prefix(10))
+                                        .foregroundColor(.secondary)
+                                }
                                 
-                                Spacer()
-                                Text("$\(transaction.amount.description)")
-                                    .foregroundColor(.mainBlue)
                             }
-                            .font(Font.body.weight(.semibold))
-                            HStack {
-                                Text(transaction.date, style: .date)
-                                    .font(.callout)
-                                    .fontWeight(.light)
-                                    .foregroundColor(.secondary)
-                                Spacer()
-                                
-                                Text(transaction.reference.prefix(10))
-                                    .foregroundColor(.secondary)
-                            }
+                            .padding(8)
+                            .background(
+                                Color(.secondarySystemBackground)
+                                    .opacity(index % 2 == 0 ? 1 : 0.5)
+                            )
                             
                         }
-                        .padding(8)
-                        .background(
-                            Color(.secondarySystemBackground)
-                                .opacity(index % 2 == 0 ? 1 : 0.5)
-                        )
-                        
                     }
                 }
+            }
+            
+            
+            if showCalendar {
+                Color.white.opacity(0.8)
+                    .onTapGesture {
+                        showCalendar.toggle()
+                    }
+                DatePickerView(isPresented: $showCalendar)
             }
         }
     }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8200178626AA1FE8007F6150 /* STView+DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8200178526AA1FE8007F6150 /* STView+DatePicker.swift */; };
+		8200178A26AA2023007F6150 /* STDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8200178926AA2023007F6150 /* STDetailsView.swift */; };
 		8241047B26AA06D60034085E /* PayeerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8241047A26AA06D60034085E /* PayeerApp.swift */; };
 		8241047D26AA06D60034085E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8241047C26AA06D60034085E /* ContentView.swift */; };
 		8241047F26AA06D80034085E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8241047E26AA06D80034085E /* Assets.xcassets */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8200178526AA1FE8007F6150 /* STView+DatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "STView+DatePicker.swift"; sourceTree = "<group>"; };
+		8200178926AA2023007F6150 /* STDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STDetailsView.swift; sourceTree = "<group>"; };
 		8241047726AA06D60034085E /* Payeer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Payeer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8241047A26AA06D60034085E /* PayeerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayeerApp.swift; sourceTree = "<group>"; };
 		8241047C26AA06D60034085E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -88,6 +92,8 @@
 				8241048E26AA0E890034085E /* AddAccountView.swift */,
 				82E07AD026AA10E4007FF98A /* DashBoardView.swift */,
 				82E07AD226AA1390007FF98A /* SalesTransactionsView.swift */,
+				8200178526AA1FE8007F6150 /* STView+DatePicker.swift */,
+				8200178926AA2023007F6150 /* STDetailsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -162,8 +168,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8241048A26AA0E2F0034085E /* LoginView.swift in Sources */,
+				8200178626AA1FE8007F6150 /* STView+DatePicker.swift in Sources */,
 				82E07AD326AA1390007FF98A /* SalesTransactionsView.swift in Sources */,
 				8241047D26AA06D60034085E /* ContentView.swift in Sources */,
+				8200178A26AA2023007F6150 /* STDetailsView.swift in Sources */,
 				8241048F26AA0E890034085E /* AddAccountView.swift in Sources */,
 				82E07AD126AA10E4007FF98A /* DashBoardView.swift in Sources */,
 				8241047B26AA06D60034085E /* PayeerApp.swift in Sources */,
