@@ -11,6 +11,9 @@
 		8241047D26AA06D60034085E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8241047C26AA06D60034085E /* ContentView.swift */; };
 		8241047F26AA06D80034085E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8241047E26AA06D80034085E /* Assets.xcassets */; };
 		8241048226AA06D80034085E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8241048126AA06D80034085E /* Preview Assets.xcassets */; };
+		8241048A26AA0E2F0034085E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8241048926AA0E2F0034085E /* LoginView.swift */; };
+		8241048D26AA0E4D0034085E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8241048C26AA0E4D0034085E /* Extensions.swift */; };
+		8241048F26AA0E890034085E /* AddAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8241048E26AA0E890034085E /* AddAccountView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +23,9 @@
 		8241047E26AA06D80034085E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8241048126AA06D80034085E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8241048326AA06D80034085E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8241048926AA0E2F0034085E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		8241048C26AA0E4D0034085E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		8241048E26AA0E890034085E /* AddAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccountView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,8 @@
 			children = (
 				8241047A26AA06D60034085E /* PayeerApp.swift */,
 				8241047C26AA06D60034085E /* ContentView.swift */,
+				8241048C26AA0E4D0034085E /* Extensions.swift */,
+				8241048B26AA0E3B0034085E /* Views */,
 				8241047E26AA06D80034085E /* Assets.xcassets */,
 				8241048326AA06D80034085E /* Info.plist */,
 				8241048026AA06D80034085E /* Preview Content */,
@@ -67,6 +75,15 @@
 				8241048126AA06D80034085E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8241048B26AA0E3B0034085E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8241048926AA0E2F0034085E /* LoginView.swift */,
+				8241048E26AA0E890034085E /* AddAccountView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +155,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8241048A26AA0E2F0034085E /* LoginView.swift in Sources */,
 				8241047D26AA06D60034085E /* ContentView.swift in Sources */,
+				8241048F26AA0E890034085E /* AddAccountView.swift in Sources */,
 				8241047B26AA06D60034085E /* PayeerApp.swift in Sources */,
+				8241048D26AA0E4D0034085E /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
