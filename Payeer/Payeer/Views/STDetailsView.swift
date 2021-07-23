@@ -26,12 +26,8 @@ struct STDetailsView: View {
                     .textCase(.uppercase)
                     .foregroundColor(.primary)
                 Spacer()
-                Image(systemName: "share")
-                    .onTapGesture {
-                        withAnimation {
-//                            showCalendar.toggle()
-                        }
-                    }
+                Image(systemName: "square.and.arrow.up")
+                    .imageScale(.large)
             }
             .foregroundColor(.secondary)
             .padding(10)

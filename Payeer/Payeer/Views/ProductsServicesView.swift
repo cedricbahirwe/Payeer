@@ -8,7 +8,7 @@
 import SwiftUI
 
 
-enum ServiceCategory: String, Equatable {
+enum ServiceCategory: String, Equatable, CaseIterable {
     case webdevelopment = "Web Development"
     case wedesign = "Web Design"
     case design = "Design"
@@ -50,6 +50,7 @@ struct ProductsServicesView: View {
     
     private let services = ServiceItem.examples
     
+    @State private var addNewService = false
     private var totalServices: Int {
         services.map(\.qty).reduce(0, +)
     }
@@ -57,11 +58,15 @@ struct ProductsServicesView: View {
     var body: some View {
         VStack(spacing: 0) {
             VStack {
+//                NavigationLink(destination: PSAddNewView()
+//                               isActive: $addNewService) { }
+                
                 MainSearchField()
                 
                 ActionHeaderView(title: "Your Services",
-                                 icon: "plus",
-                                 action: {})
+                                 icon: "plus") {
+                    addNewService.toggle()
+                }
             }
             .padding([.horizontal, .bottom], 10)
             Divider()
