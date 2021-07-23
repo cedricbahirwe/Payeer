@@ -24,17 +24,21 @@ struct DashBoardView: View {
         
     ]
     var body: some View {
-        VStack(alignment: .leading) {
+        VStack(spacing: 0) {
+            VStack {
             MainSearchField("Seach for transactions",
                             text: .constant("Seach for transactions"))
             
-            Text("Sales Summary")
-                .font(Font.largeTitle.bold())
+            ActionHeaderView(title: "Sales Summary", action: {})
+            }
+            .padding([.horizontal, .bottom], 10)
             
             RoundedRectangle(cornerRadius: 20)
                 .overlay(Text("Graph View")
                             .font(.largeTitle)
                             .foregroundColor(.white))
+                .padding(10)
+
             
             ScrollView {
                 ForEach(summary) { item in
@@ -45,12 +49,11 @@ struct DashBoardView: View {
                         Text(String(format: "$%.2f", item.amount))
                         
                     }
-                    .font(Font.body.weight(.semibold))
                     .padding(.vertical, 10)
                 }
             }
+            .padding(10)
         }
-        .padding(10)
     }
 }
 

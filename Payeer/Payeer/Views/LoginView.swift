@@ -24,6 +24,7 @@ struct LoginView: View {
                             .foregroundColor(.white)
                             .font(.system(.largeTitle, design: .rounded))
                             .bold()
+                            .scaleEffect(1.4)
                     )
                 
                 VStack(spacing: 20) {

@@ -20,6 +20,7 @@ enum ServiceCategory: String, Equatable {
         switch self {
         case .webdevelopment: return .purple
         case .marketing: return .red
+        case .outsourcing: return .green
         case .design: return Color(UIColor.systemTeal)
         default:
             return .black
@@ -54,66 +55,69 @@ struct ProductsServicesView: View {
     }
     
     var body: some View {
-        VStack {
-            Group {
+        VStack(spacing: 0) {
+            VStack {
                 MainSearchField()
                 
                 ActionHeaderView(title: "Your Services",
                                  icon: "plus",
                                  action: {})
             }
-            .padding(.horizontal, 10)
+            .padding([.horizontal, .bottom], 10)
             Divider()
-            ScrollView(.horizontal, showsIndicators: false) {
-                HStack {
-                    ServiceCardView(title: totalServices.description,
-                                    subtitle: "All services",
-                                    color: .mainBlue)
-                        .padding(.leading)
-                    ForEach(services) { service in
-                        ServiceCardView(title: service.qty.description,
-                                        subtitle: service.title,
-                                        color: service.category.color)
-                    }
-                }
-            }
-            
-            VStack(spacing: 0) {
-                ForEach(0..<services.count) { i in
-                    let service = services[i]
-                    HStack(spacing: 10) {
-                        Image("image1")
-                            .resizable()
-                            .scaledToFill()
-                            .frame(width: 45, height: 45)
-                            .clipShape(Circle())
-                        VStack(spacing: 0) {
-                            HStack {
-                                Text(service.title)
-                                    .opacity(0.8)
-                                Spacer()
-                                Text(service.qty.description)
-                                    .foregroundColor(.mainBlue)
-                            }
-                            HStack {
-                                Text(service.category.rawValue)
-                                    .opacity(0.5)
-                                Spacer()
-                                Text("Number of Sales")
-                                    .font(.caption)
-                                
-                            }
+            ScrollView {
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack {
+                        ServiceCardView(title: totalServices.description,
+                                        subtitle: "All services",
+                                        color: .mainBlue)
+                            .padding(.leading)
+                        ForEach(services) { service in
+                            ServiceCardView(title: service.qty.description,
+                                            subtitle: service.title,
+                                            color: service.category.color)
                         }
                     }
-                    .padding(10)
-                    .background(
-                        Color(.secondarySystemBackground)
-                            .opacity(i%2==0 ? 0 : 1)
-                    )
                 }
+                .padding(.top, 5)
+
                 
+                VStack(spacing: 0) {
+                    ForEach(0..<services.count) { i in
+                        let service = services[i]
+                        HStack(spacing: 10) {
+                            Image("image\(i+1)")
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width: 45, height: 45)
+                                .clipShape(Circle())
+                            VStack(spacing: 0) {
+                                HStack {
+                                    Text(service.title)
+                                        .opacity(0.8)
+                                    Spacer()
+                                    Text(service.qty.description)
+                                        .foregroundColor(.mainBlue)
+                                }
+                                HStack {
+                                    Text(service.category.rawValue)
+                                    Spacer()
+                                    Text("Number of Sales")
+                                }
+                                .opacity(0.5)
+                                .font(.callout)
+                            }
+                        }
+                        .padding(10)
+                        .background(
+                            Color(.secondarySystemBackground)
+                                .opacity(i%2==0 ? 0 : 1)
+                        )
+                    }
+                    
+                }
             }
-            Spacer()
+
         }
     }
 }

@@ -49,23 +49,23 @@ struct PaymentMethodsView: View {
         pmethods.map(\.amount).reduce(0, +)
     }
     var body: some View {
-        VStack {
-            Group {
+        VStack(spacing: 0) {
+            VStack {
                 MainSearchField()
                 
                 ActionHeaderView(title: "Sales Summary",
                                  icon: "slider.vertical.3",
                                  action: {})
             }
-            .padding(.horizontal, 10)
+            .padding([.horizontal, .bottom], 10)
             ZStack {
-                if showPieGraph {
+                if !showPieGraph {
                     
                     PieChartView(transactions: pmethods) {
                         String(format: "$%.2f", $0)
                     }
                     .matchedGeometryEffect(id: "chart", in: animate)
-                    .frame(width: 200, height: 200)
+                    .frame(width: 250, height: 250)
                     .padding(.vertical)
                 } else {
                     VStack {
@@ -153,17 +153,27 @@ struct PaymentMethodsView_Previews: PreviewProvider {
 
 struct ActionHeaderView: View {
     let title: String
-    let icon: String
+    let icon: String?
     let action: () -> Void
+    
+    init(title: String,
+         icon: String? = nil,
+         action: @escaping() -> Void) {
+        self.title = title
+        self.icon = icon
+        self.action = action
+    }
     var body: some View {
         HStack {
             Text(title)
                 .font(Font.title.weight(.medium))
             Spacer()
-            Image(systemName: icon)
+            if let name = icon {
+            Image(systemName: name)
                 .imageScale(.large)
                 .foregroundColor(.secondary)
                 .onAppear(perform: action)
+            }
         }
     }
 }
