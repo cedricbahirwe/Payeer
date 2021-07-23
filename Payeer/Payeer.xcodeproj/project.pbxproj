@@ -1,0 +1,417 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8200178626AA1FE8007F6150 /* STView+DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8200178526AA1FE8007F6150 /* STView+DatePicker.swift */; };
+		8200178A26AA2023007F6150 /* STDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8200178926AA2023007F6150 /* STDetailsView.swift */; };
+		8200178E26AA23C1007F6150 /* PaymentMethodsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8200178D26AA23C1007F6150 /* PaymentMethodsView.swift */; };
+		8200179026AA2C63007F6150 /* PieSlice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8200178F26AA2C63007F6150 /* PieSlice.swift */; };
+		8200179226AA2C7E007F6150 /* PieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8200179126AA2C7E007F6150 /* PieChartView.swift */; };
+		8239D8C526AB0117002DB4A6 /* ServiceItem+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8239D8C426AB0117002DB4A6 /* ServiceItem+Category.swift */; };
+		8239D8C826AB014C002DB4A6 /* ServiceCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8239D8C726AB014C002DB4A6 /* ServiceCardView.swift */; };
+		8239D8CA26AB030F002DB4A6 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8239D8C926AB030F002DB4A6 /* Transaction.swift */; };
+		8241047B26AA06D60034085E /* PayeerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8241047A26AA06D60034085E /* PayeerApp.swift */; };
+		8241047D26AA06D60034085E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8241047C26AA06D60034085E /* ContentView.swift */; };
+		8241047F26AA06D80034085E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8241047E26AA06D80034085E /* Assets.xcassets */; };
+		8241048226AA06D80034085E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8241048126AA06D80034085E /* Preview Assets.xcassets */; };
+		8241048A26AA0E2F0034085E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8241048926AA0E2F0034085E /* LoginView.swift */; };
+		8241048D26AA0E4D0034085E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8241048C26AA0E4D0034085E /* Extensions.swift */; };
+		8241048F26AA0E890034085E /* AddAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8241048E26AA0E890034085E /* AddAccountView.swift */; };
+		828A9AE426AAD95D008117B2 /* ProductsServicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828A9AE326AAD95C008117B2 /* ProductsServicesView.swift */; };
+		828A9AE626AAED5A008117B2 /* PServicesView+AddNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828A9AE526AAED5A008117B2 /* PServicesView+AddNew.swift */; };
+		82E07AD126AA10E4007FF98A /* DashBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E07AD026AA10E4007FF98A /* DashBoardView.swift */; };
+		82E07AD326AA1390007FF98A /* SalesTransactionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E07AD226AA1390007FF98A /* SalesTransactionsView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8200178526AA1FE8007F6150 /* STView+DatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "STView+DatePicker.swift"; sourceTree = "<group>"; };
+		8200178926AA2023007F6150 /* STDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STDetailsView.swift; sourceTree = "<group>"; };
+		8200178D26AA23C1007F6150 /* PaymentMethodsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodsView.swift; sourceTree = "<group>"; };
+		8200178F26AA2C63007F6150 /* PieSlice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieSlice.swift; sourceTree = "<group>"; };
+		8200179126AA2C7E007F6150 /* PieChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartView.swift; sourceTree = "<group>"; };
+		8239D8C426AB0117002DB4A6 /* ServiceItem+Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ServiceItem+Category.swift"; sourceTree = "<group>"; };
+		8239D8C726AB014C002DB4A6 /* ServiceCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCardView.swift; sourceTree = "<group>"; };
+		8239D8C926AB030F002DB4A6 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		8241047726AA06D60034085E /* Payeer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Payeer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8241047A26AA06D60034085E /* PayeerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayeerApp.swift; sourceTree = "<group>"; };
+		8241047C26AA06D60034085E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8241047E26AA06D80034085E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8241048126AA06D80034085E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8241048326AA06D80034085E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8241048926AA0E2F0034085E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		8241048C26AA0E4D0034085E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		8241048E26AA0E890034085E /* AddAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccountView.swift; sourceTree = "<group>"; };
+		828A9AE326AAD95C008117B2 /* ProductsServicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsServicesView.swift; sourceTree = "<group>"; };
+		828A9AE526AAED5A008117B2 /* PServicesView+AddNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PServicesView+AddNew.swift"; sourceTree = "<group>"; };
+		82E07AD026AA10E4007FF98A /* DashBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardView.swift; sourceTree = "<group>"; };
+		82E07AD226AA1390007FF98A /* SalesTransactionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesTransactionsView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8241047426AA06D60034085E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8239D8C126AB00F7002DB4A6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8239D8C426AB0117002DB4A6 /* ServiceItem+Category.swift */,
+				8239D8C926AB030F002DB4A6 /* Transaction.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8239D8C626AB0145002DB4A6 /* Reusable Views */ = {
+			isa = PBXGroup;
+			children = (
+				8200179126AA2C7E007F6150 /* PieChartView.swift */,
+				8200178F26AA2C63007F6150 /* PieSlice.swift */,
+				8239D8C726AB014C002DB4A6 /* ServiceCardView.swift */,
+			);
+			path = "Reusable Views";
+			sourceTree = "<group>";
+		};
+		8241046E26AA06D60034085E = {
+			isa = PBXGroup;
+			children = (
+				8241047926AA06D60034085E /* Payeer */,
+				8241047826AA06D60034085E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8241047826AA06D60034085E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8241047726AA06D60034085E /* Payeer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8241047926AA06D60034085E /* Payeer */ = {
+			isa = PBXGroup;
+			children = (
+				8241047A26AA06D60034085E /* PayeerApp.swift */,
+				8241047C26AA06D60034085E /* ContentView.swift */,
+				8241048C26AA0E4D0034085E /* Extensions.swift */,
+				8241048B26AA0E3B0034085E /* Views */,
+				8241047E26AA06D80034085E /* Assets.xcassets */,
+				8239D8C126AB00F7002DB4A6 /* Models */,
+				8241048326AA06D80034085E /* Info.plist */,
+				8241048026AA06D80034085E /* Preview Content */,
+			);
+			path = Payeer;
+			sourceTree = "<group>";
+		};
+		8241048026AA06D80034085E /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				8241048126AA06D80034085E /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8241048B26AA0E3B0034085E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8241048926AA0E2F0034085E /* LoginView.swift */,
+				8241048E26AA0E890034085E /* AddAccountView.swift */,
+				82E07AD026AA10E4007FF98A /* DashBoardView.swift */,
+				828A9AE326AAD95C008117B2 /* ProductsServicesView.swift */,
+				828A9AE526AAED5A008117B2 /* PServicesView+AddNew.swift */,
+				82E07AD226AA1390007FF98A /* SalesTransactionsView.swift */,
+				8200178526AA1FE8007F6150 /* STView+DatePicker.swift */,
+				8200178926AA2023007F6150 /* STDetailsView.swift */,
+				8200178D26AA23C1007F6150 /* PaymentMethodsView.swift */,
+				8239D8C626AB0145002DB4A6 /* Reusable Views */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8241047626AA06D60034085E /* Payeer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8241048626AA06D80034085E /* Build configuration list for PBXNativeTarget "Payeer" */;
+			buildPhases = (
+				8241047326AA06D60034085E /* Sources */,
+				8241047426AA06D60034085E /* Frameworks */,
+				8241047526AA06D60034085E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Payeer;
+			productName = Payeer;
+			productReference = 8241047726AA06D60034085E /* Payeer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8241046F26AA06D60034085E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					8241047626AA06D60034085E = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+				};
+			};
+			buildConfigurationList = 8241047226AA06D60034085E /* Build configuration list for PBXProject "Payeer" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8241046E26AA06D60034085E;
+			productRefGroup = 8241047826AA06D60034085E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8241047626AA06D60034085E /* Payeer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8241047526AA06D60034085E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8241048226AA06D80034085E /* Preview Assets.xcassets in Resources */,
+				8241047F26AA06D80034085E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8241047326AA06D60034085E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8200179226AA2C7E007F6150 /* PieChartView.swift in Sources */,
+				828A9AE426AAD95D008117B2 /* ProductsServicesView.swift in Sources */,
+				8241048A26AA0E2F0034085E /* LoginView.swift in Sources */,
+				8200178626AA1FE8007F6150 /* STView+DatePicker.swift in Sources */,
+				8200179026AA2C63007F6150 /* PieSlice.swift in Sources */,
+				82E07AD326AA1390007FF98A /* SalesTransactionsView.swift in Sources */,
+				8239D8CA26AB030F002DB4A6 /* Transaction.swift in Sources */,
+				8239D8C826AB014C002DB4A6 /* ServiceCardView.swift in Sources */,
+				8241047D26AA06D60034085E /* ContentView.swift in Sources */,
+				8200178A26AA2023007F6150 /* STDetailsView.swift in Sources */,
+				8241048F26AA0E890034085E /* AddAccountView.swift in Sources */,
+				8200178E26AA23C1007F6150 /* PaymentMethodsView.swift in Sources */,
+				828A9AE626AAED5A008117B2 /* PServicesView+AddNew.swift in Sources */,
+				82E07AD126AA10E4007FF98A /* DashBoardView.swift in Sources */,
+				8241047B26AA06D60034085E /* PayeerApp.swift in Sources */,
+				8239D8C526AB0117002DB4A6 /* ServiceItem+Category.swift in Sources */,
+				8241048D26AA0E4D0034085E /* Extensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		8241048426AA06D80034085E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8241048526AA06D80034085E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8241048726AA06D80034085E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Payeer/Preview Content\"";
+				DEVELOPMENT_TEAM = 9C9R36NYWY;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Payeer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cedo.commonworldinc.Payeer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8241048826AA06D80034085E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Payeer/Preview Content\"";
+				DEVELOPMENT_TEAM = 9C9R36NYWY;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Payeer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cedo.commonworldinc.Payeer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8241047226AA06D60034085E /* Build configuration list for PBXProject "Payeer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8241048426AA06D80034085E /* Debug */,
+				8241048526AA06D80034085E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8241048626AA06D80034085E /* Build configuration list for PBXNativeTarget "Payeer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8241048726AA06D80034085E /* Debug */,
+				8241048826AA06D80034085E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8241046F26AA06D60034085E /* Project object */;
+}
