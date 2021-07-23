@@ -53,15 +53,9 @@ struct PaymentMethodsView: View {
             Group {
                 MainSearchField()
                 
-                HStack {
-                    Text("Sales Summary")
-                        .font(Font.title.weight(.medium))
-                    Spacer()
-                    Image(systemName: "slider.vertical.3")
-                        .imageScale(.large)
-                        .foregroundColor(.secondary)
-                }
-                
+                ActionHeaderView(title: "Sales Summary",
+                                 icon: "slider.vertical.3",
+                                 action: {})
             }
             .padding(.horizontal, 10)
             ZStack {
@@ -154,5 +148,22 @@ struct PaymentMethodsView: View {
 struct PaymentMethodsView_Previews: PreviewProvider {
     static var previews: some View {
         PaymentMethodsView()
+    }
+}
+
+struct ActionHeaderView: View {
+    let title: String
+    let icon: String
+    let action: () -> Void
+    var body: some View {
+        HStack {
+            Text(title)
+                .font(Font.title.weight(.medium))
+            Spacer()
+            Image(systemName: icon)
+                .imageScale(.large)
+                .foregroundColor(.secondary)
+                .onAppear(perform: action)
+        }
     }
 }

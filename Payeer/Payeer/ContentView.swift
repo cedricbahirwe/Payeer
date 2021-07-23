@@ -23,6 +23,13 @@ struct ContentView: View {
                 }
                 .tag(2)
             
+            
+                ProductsServicesView()
+            
+                .tabItem {
+                    Image(systemName: "bag")
+                }
+                .tag(2)
             LoginView()
                 .tabItem {
                     Image(systemName: "person.fill")
