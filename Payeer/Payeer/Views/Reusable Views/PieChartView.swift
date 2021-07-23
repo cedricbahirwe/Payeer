@@ -34,7 +34,7 @@ struct PieChartView: View {
     }
     
     init(transactions:[PaymentMethod],
-         backgroundColor: Color = .white,
+         backgroundColor: Color = Color(.systemBackground),
          formatter: @escaping (Double) -> String,
          widthFraction: CGFloat = 1.0,
          innerRadiusFraction: CGFloat = 0.70) {
@@ -93,15 +93,13 @@ struct PieChartView: View {
                         .font(.system(.title, design: .rounded))
                         .foregroundColor(.primary)
                     Text(activeIndex == -1 ? "Total" : names[activeIndex])
-                        .font(.title3)
+                        .font(.headline)
                         .foregroundColor(.secondary)
                         .lineLimit(1)
                         .minimumScaleFactor(0.5)
                 }
                 
             }
-//            .background(backgroundColor)
-            .foregroundColor(Color.white)
         }
     }
 }

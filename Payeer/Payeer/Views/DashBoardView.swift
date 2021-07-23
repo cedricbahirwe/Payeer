@@ -24,35 +24,49 @@ struct DashBoardView: View {
         
     ]
     var body: some View {
-        VStack(spacing: 0) {
-            VStack {
-            MainSearchField("Seach for transactions",
-                            text: .constant("Seach for transactions"))
-            
-            ActionHeaderView(title: "Sales Summary", action: {})
-            }
-            .padding([.horizontal, .bottom], 10)
-            
-            RoundedRectangle(cornerRadius: 20)
-                .overlay(Text("Graph View")
-                            .font(.largeTitle)
-                            .foregroundColor(.white))
-                .padding(10)
-
-            
-            ScrollView {
-                ForEach(summary) { item in
-                    HStack {
-                        Text(item.name)
-                            .foregroundColor(.secondary)
-                        Spacer()
-                        Text(String(format: "$%.2f", item.amount))
+        NavigationView {
+            VStack(spacing: 0) {
+                VStack {
+                    MainSearchField("Seach for transactions",
+                                    text: .constant(""))
+                    
+                    ActionHeaderView(title: "Sales Summary", action: {})
+                }
+                .padding([.horizontal, .bottom], 10)
+                
+                ScrollView {
+                    VStack(spacing: 0) {
+                        RoundedRectangle(cornerRadius: 20)
+                            .fill(Color(.tertiarySystemFill))
+                            .frame(height: 200)
+                            .overlay(Text("Graph View")
+                                        .font(.largeTitle)
+                                        .foregroundColor(.primary))
+                            .padding(10)
                         
+                        ForEach(0..<summary.count) { i in
+                            let item = summary[i]
+                            NavigationLink(
+                                destination: SalesTransactionsView()) {
+                                HStack {
+                                    Text(item.name)
+                                        .foregroundColor(.secondary)
+                                    Spacer()
+                                    Text(String(format: "$%.2f", item.amount))
+                                    
+                                }
+                                .padding()
+                                .background(
+                                    Color(.secondarySystemBackground)
+                                        .opacity(i%2==0 ? 1 : 0)
+                                )
+                            }
+                        }
                     }
-                    .padding(.vertical, 10)
                 }
             }
-            .padding(10)
+            .navigationTitle("")
+            .navigationBarHidden(true)
         }
     }
 }
@@ -74,7 +88,7 @@ struct MainSearchField: View {
     
     init() {
         placeholder = "Search for transactions"
-        _text = .constant(placeholder)
+        _text = .constant("")
     }
     var body: some View {
         HStack {

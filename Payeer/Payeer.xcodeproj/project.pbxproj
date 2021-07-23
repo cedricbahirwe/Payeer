@@ -12,6 +12,9 @@
 		8200178E26AA23C1007F6150 /* PaymentMethodsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8200178D26AA23C1007F6150 /* PaymentMethodsView.swift */; };
 		8200179026AA2C63007F6150 /* PieSlice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8200178F26AA2C63007F6150 /* PieSlice.swift */; };
 		8200179226AA2C7E007F6150 /* PieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8200179126AA2C7E007F6150 /* PieChartView.swift */; };
+		8239D8C526AB0117002DB4A6 /* ServiceItem+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8239D8C426AB0117002DB4A6 /* ServiceItem+Category.swift */; };
+		8239D8C826AB014C002DB4A6 /* ServiceCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8239D8C726AB014C002DB4A6 /* ServiceCardView.swift */; };
+		8239D8CA26AB030F002DB4A6 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8239D8C926AB030F002DB4A6 /* Transaction.swift */; };
 		8241047B26AA06D60034085E /* PayeerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8241047A26AA06D60034085E /* PayeerApp.swift */; };
 		8241047D26AA06D60034085E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8241047C26AA06D60034085E /* ContentView.swift */; };
 		8241047F26AA06D80034085E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8241047E26AA06D80034085E /* Assets.xcassets */; };
@@ -31,6 +34,9 @@
 		8200178D26AA23C1007F6150 /* PaymentMethodsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodsView.swift; sourceTree = "<group>"; };
 		8200178F26AA2C63007F6150 /* PieSlice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieSlice.swift; sourceTree = "<group>"; };
 		8200179126AA2C7E007F6150 /* PieChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartView.swift; sourceTree = "<group>"; };
+		8239D8C426AB0117002DB4A6 /* ServiceItem+Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ServiceItem+Category.swift"; sourceTree = "<group>"; };
+		8239D8C726AB014C002DB4A6 /* ServiceCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCardView.swift; sourceTree = "<group>"; };
+		8239D8C926AB030F002DB4A6 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		8241047726AA06D60034085E /* Payeer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Payeer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8241047A26AA06D60034085E /* PayeerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayeerApp.swift; sourceTree = "<group>"; };
 		8241047C26AA06D60034085E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -57,6 +63,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8239D8C126AB00F7002DB4A6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8239D8C426AB0117002DB4A6 /* ServiceItem+Category.swift */,
+				8239D8C926AB030F002DB4A6 /* Transaction.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8239D8C626AB0145002DB4A6 /* Reusable Views */ = {
+			isa = PBXGroup;
+			children = (
+				8200179126AA2C7E007F6150 /* PieChartView.swift */,
+				8200178F26AA2C63007F6150 /* PieSlice.swift */,
+				8239D8C726AB014C002DB4A6 /* ServiceCardView.swift */,
+			);
+			path = "Reusable Views";
+			sourceTree = "<group>";
+		};
 		8241046E26AA06D60034085E = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +106,7 @@
 				8241048C26AA0E4D0034085E /* Extensions.swift */,
 				8241048B26AA0E3B0034085E /* Views */,
 				8241047E26AA06D80034085E /* Assets.xcassets */,
+				8239D8C126AB00F7002DB4A6 /* Models */,
 				8241048326AA06D80034085E /* Info.plist */,
 				8241048026AA06D80034085E /* Preview Content */,
 			);
@@ -107,8 +133,7 @@
 				8200178526AA1FE8007F6150 /* STView+DatePicker.swift */,
 				8200178926AA2023007F6150 /* STDetailsView.swift */,
 				8200178D26AA23C1007F6150 /* PaymentMethodsView.swift */,
-				8200179126AA2C7E007F6150 /* PieChartView.swift */,
-				8200178F26AA2C63007F6150 /* PieSlice.swift */,
+				8239D8C626AB0145002DB4A6 /* Reusable Views */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -188,6 +213,8 @@
 				8200178626AA1FE8007F6150 /* STView+DatePicker.swift in Sources */,
 				8200179026AA2C63007F6150 /* PieSlice.swift in Sources */,
 				82E07AD326AA1390007FF98A /* SalesTransactionsView.swift in Sources */,
+				8239D8CA26AB030F002DB4A6 /* Transaction.swift in Sources */,
+				8239D8C826AB014C002DB4A6 /* ServiceCardView.swift in Sources */,
 				8241047D26AA06D60034085E /* ContentView.swift in Sources */,
 				8200178A26AA2023007F6150 /* STDetailsView.swift in Sources */,
 				8241048F26AA0E890034085E /* AddAccountView.swift in Sources */,
@@ -195,6 +222,7 @@
 				828A9AE626AAED5A008117B2 /* PServicesView+AddNew.swift in Sources */,
 				82E07AD126AA10E4007FF98A /* DashBoardView.swift in Sources */,
 				8241047B26AA06D60034085E /* PayeerApp.swift in Sources */,
+				8239D8C526AB0117002DB4A6 /* ServiceItem+Category.swift in Sources */,
 				8241048D26AA0E4D0034085E /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

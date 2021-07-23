@@ -9,6 +9,7 @@ import SwiftUI
 
 
 struct LoginView: View {
+    @AppStorage("isLoggedIn") var isLoggedIn: Bool = false
     var body: some View {
         ZStack {
             Color.mainBlue
@@ -54,8 +55,9 @@ struct LoginView: View {
                     }
                     
                     
-                    Button(action: {}) {
-                        
+                    Button(action: {
+                        isLoggedIn = true
+                    }) {
                         Text("Login")
                             .font(.system(.body, design: .rounded))
                             .foregroundColor(.mainBlue)
@@ -77,6 +79,8 @@ struct LoginView: View {
         }
         .foregroundColor(.white)
         .ignoresSafeArea()
+        .navigationTitle("")
+        .navigationBarHidden(true)
     }
 }
 

@@ -7,21 +7,6 @@
 
 import SwiftUI
 
-struct Transaction: Identifiable {
-    let id = UUID()
-    let title: String
-    let date: Date = Date()
-    let amount: Double
-    let reference: String
-    
-    
-    static let examples: [Transaction] = (0..<9).map { number in
-        Transaction(title: "Direct Transfer",
-                    amount: 2509.00,
-                    reference: UUID().uuidString)
-    }
-}
-
 struct SalesTransactionsView: View {
     let transactions:[Transaction] = Transaction.examples
     @Environment(\.presentationMode) private var presentationMode
@@ -40,7 +25,8 @@ struct SalesTransactionsView: View {
                             }
                         Spacer()
                         Text("Transactions")
-                            .font(Font.title3.bold())
+                            .font(Font.title3)
+                            .fontWeight(.medium)
                             .textCase(.uppercase)
                             .foregroundColor(.primary)
                         Spacer()
@@ -83,6 +69,8 @@ struct SalesTransactionsView: View {
                 DatePickerView(isPresented: $showCalendar)
             }
         }
+        .navigationTitle("")
+        .navigationBarHidden(true)
     }
 }
 

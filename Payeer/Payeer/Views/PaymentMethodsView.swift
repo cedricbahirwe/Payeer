@@ -41,8 +41,6 @@ struct PaymentMethod: Identifiable {
 struct PaymentMethodsView: View {
     
     private let pmethods = PaymentMethod.examples
-    
-    
     @Namespace private var animate
     @State private var showPieGraph = false
     private var totalAmount: Double {
@@ -59,7 +57,7 @@ struct PaymentMethodsView: View {
             }
             .padding([.horizontal, .bottom], 10)
             ZStack {
-                if !showPieGraph {
+                if showPieGraph {
                     
                     PieChartView(transactions: pmethods) {
                         String(format: "$%.2f", $0)
@@ -69,31 +67,31 @@ struct PaymentMethodsView: View {
                     .padding(.vertical)
                 } else {
                     VStack {
-                    GeometryReader { geo in
-                        HStack(spacing: 0) {
-                            ForEach(pmethods) { method in
-                                method.type.color
-                                    .frame(width:  geo.size.width * CGFloat(method.amount/totalAmount))
+                        GeometryReader { geo in
+                            HStack(spacing: 0) {
+                                ForEach(pmethods) { method in
+                                    method.type.color
+                                        .frame(width:  geo.size.width * CGFloat(method.amount/totalAmount))
+                                }
                             }
                         }
+                        .frame(height: 40)
+                        .transition(.scale)
+                        
+                        Text(String(format: "$%.2f", totalAmount))
+                            .font(Font.headline)
+                            .foregroundColor(.white)
+                            .padding(.vertical, 8)
+                            .padding(.horizontal, 20)
+                            .minimumScaleFactor(0.6)
+                            .background(Color.mainBlue)
+                            .clipShape(Capsule())
+                            .padding(.vertical)
+                            .matchedGeometryEffect(id: "chart", in: animate)
+                        
                     }
-                    .frame(height: 40)
-                    .transition(.scale)
                     
-                    Text(String(format: "$%.2f", totalAmount))
-                        .font(Font.headline)
-                        .foregroundColor(.white)
-                        .padding(.vertical, 8)
-                        .padding(.horizontal, 20)
-                        .minimumScaleFactor(0.6)
-                        .background(Color.mainBlue)
-                        .clipShape(Capsule())
-                        .padding(.vertical)
-                        .matchedGeometryEffect(id: "chart", in: animate)
-
-                    }
                     
-
                 }
                 
                 
@@ -113,7 +111,7 @@ struct PaymentMethodsView: View {
                     }
                 , alignment: .topLeading
             )
-
+            
             ScrollView {
                 VStack(spacing: 0) {
                     ForEach(0..<pmethods.count) { i in
@@ -140,8 +138,9 @@ struct PaymentMethodsView: View {
                 }
             }
             Spacer()
-
         }
+        .navigationTitle("")
+        .navigationBarHidden(true)
     }
 }
 
@@ -169,10 +168,10 @@ struct ActionHeaderView: View {
                 .font(Font.title.weight(.medium))
             Spacer()
             if let name = icon {
-            Image(systemName: name)
-                .imageScale(.large)
-                .foregroundColor(.secondary)
-                .onAppear(perform: action)
+                Image(systemName: name)
+                    .imageScale(.large)
+                    .foregroundColor(.secondary)
+                    .onAppear(perform: action)
             }
         }
     }

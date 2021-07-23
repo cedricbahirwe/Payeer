@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct AddAccountView: View {
+    @AppStorage("hasAccount") var hasAccount: Bool = false
     var body: some View {
         ZStack {
             Color.mainBlue
@@ -68,8 +69,9 @@ struct AddAccountView: View {
                         Color.gray.frame(height: 0.8)
                     }
                     
-                    Button(action: {}) {
-                        
+                    Button(action: {
+                        hasAccount = true
+                    }) {
                         Text("Next")
                             .font(.system(.body, design: .rounded))
                             .foregroundColor(.mainBlue)
@@ -87,6 +89,8 @@ struct AddAccountView: View {
         }
         .foregroundColor(.white)
         .ignoresSafeArea()
+        .navigationTitle("")
+        .navigationBarHidden(true)
     }
 }
 

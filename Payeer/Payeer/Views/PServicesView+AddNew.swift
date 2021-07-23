@@ -23,7 +23,8 @@ struct PSAddNewView: View {
                         presentationMode.wrappedValue.dismiss()
                     }
                 Spacer()
-                Text("Payment Details")
+                Text("Add New Service")
+                    .textCase(.uppercase)
                     .font(Font.title3.bold())
                     .textCase(.uppercase)
                     .foregroundColor(.primary)
@@ -106,6 +107,8 @@ struct PSAddNewView: View {
             .offset(y: -25) // For camera button
             .padding(.horizontal)
         }
+        .navigationTitle("")
+        .navigationBarHidden(true)
     }
 }
 
