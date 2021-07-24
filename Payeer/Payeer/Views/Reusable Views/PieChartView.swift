@@ -94,7 +94,7 @@ struct PieChartView: View {
                         .foregroundColor(.primary)
                     Text(activeIndex == -1 ? "Total" : names[activeIndex])
                         .font(.headline)
-                        .foregroundColor(.secondary)
+                        .foregroundColor(.mainGray)
                         .lineLimit(1)
                         .minimumScaleFactor(0.5)
                 }

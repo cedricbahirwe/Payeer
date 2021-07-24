@@ -74,7 +74,7 @@ struct ProductsServicesView: View {
                             }
                             .padding(10)
                             .background(
-                                Color(.secondarySystemBackground)
+                                Color.secondaryBg
                                     .opacity(i%2==0 ? 0 : 1)
                             )
                         }

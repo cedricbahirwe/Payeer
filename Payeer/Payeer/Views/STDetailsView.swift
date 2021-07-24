@@ -9,7 +9,7 @@ import SwiftUI
 import MapKit
 
 struct STDetailsView: View {
-    @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275), span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5))
+    @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: -1.939484, longitude: 30.074456), span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
 
     @Environment(\.presentationMode) private var presentationMode
     var body: some View {
@@ -29,14 +29,14 @@ struct STDetailsView: View {
                 Image(systemName: "square.and.arrow.up")
                     .imageScale(.large)
             }
-            .foregroundColor(.secondary)
+            .foregroundColor(.mainGray)
             .padding(10)
             Divider()
             let transaction = Transaction.examples.first!
             
             TransactionRowView(transaction: transaction)
                 .padding(8)
-                .background(Color(.secondarySystemBackground))
+                .background(Color.secondaryBg)
             
             VStack(alignment: .leading, spacing: 3) {
                 HStack {
@@ -49,7 +49,7 @@ struct STDetailsView: View {
                 Text(transaction.date, style: .date)
                     .font(.callout)
                     .fontWeight(.light)
-                    .foregroundColor(.secondary)
+                    .foregroundColor(.mainGray)
                 
             }
             .padding(8)
@@ -60,16 +60,18 @@ struct STDetailsView: View {
                 Text("Payment Under Contract #D512-3445")
                     .font(.callout)
                     .fontWeight(.regular)
-                    .foregroundColor(.secondary)
+                    .foregroundColor(.mainGray)
                     .opacity(0.8)
                 
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(8)
-            .background(Color(.secondarySystemBackground))
+            .background(Color.secondaryBg)
 
-            Map(coordinateRegion: .constant(MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275), span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5))), interactionModes: [])
+            Map(coordinateRegion: $region, interactionModes: [.zoom])
         }
+        .navigationTitle("")
+        .navigationBarHidden(true)
     }
 }
 

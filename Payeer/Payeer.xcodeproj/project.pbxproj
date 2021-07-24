@@ -26,6 +26,10 @@
 		828A9AE626AAED5A008117B2 /* PServicesView+AddNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 828A9AE526AAED5A008117B2 /* PServicesView+AddNew.swift */; };
 		82E07AD126AA10E4007FF98A /* DashBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E07AD026AA10E4007FF98A /* DashBoardView.swift */; };
 		82E07AD326AA1390007FF98A /* SalesTransactionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E07AD226AA1390007FF98A /* SalesTransactionsView.swift */; };
+		82E8E7EE26AC324E00938EC5 /* PMDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E8E7ED26AC324E00938EC5 /* PMDetailsView.swift */; };
+		82E8E7F026AC36DE00938EC5 /* EmployeeSalesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E8E7EF26AC36DE00938EC5 /* EmployeeSalesView.swift */; };
+		82E8E7F226AC3AC700938EC5 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E8E7F126AC3AC700938EC5 /* Employee.swift */; };
+		82E8E7F426AC401800938EC5 /* AppSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E8E7F326AC401800938EC5 /* AppSettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +54,10 @@
 		828A9AE526AAED5A008117B2 /* PServicesView+AddNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PServicesView+AddNew.swift"; sourceTree = "<group>"; };
 		82E07AD026AA10E4007FF98A /* DashBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardView.swift; sourceTree = "<group>"; };
 		82E07AD226AA1390007FF98A /* SalesTransactionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesTransactionsView.swift; sourceTree = "<group>"; };
+		82E8E7ED26AC324E00938EC5 /* PMDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMDetailsView.swift; sourceTree = "<group>"; };
+		82E8E7EF26AC36DE00938EC5 /* EmployeeSalesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeSalesView.swift; sourceTree = "<group>"; };
+		82E8E7F126AC3AC700938EC5 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
+		82E8E7F326AC401800938EC5 /* AppSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +76,7 @@
 			children = (
 				8239D8C426AB0117002DB4A6 /* ServiceItem+Category.swift */,
 				8239D8C926AB030F002DB4A6 /* Transaction.swift */,
+				82E8E7F126AC3AC700938EC5 /* Employee.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -105,8 +114,8 @@
 				8241047C26AA06D60034085E /* ContentView.swift */,
 				8241048C26AA0E4D0034085E /* Extensions.swift */,
 				8241048B26AA0E3B0034085E /* Views */,
-				8241047E26AA06D80034085E /* Assets.xcassets */,
 				8239D8C126AB00F7002DB4A6 /* Models */,
+				8241047E26AA06D80034085E /* Assets.xcassets */,
 				8241048326AA06D80034085E /* Info.plist */,
 				8241048026AA06D80034085E /* Preview Content */,
 			);
@@ -127,12 +136,15 @@
 				8241048926AA0E2F0034085E /* LoginView.swift */,
 				8241048E26AA0E890034085E /* AddAccountView.swift */,
 				82E07AD026AA10E4007FF98A /* DashBoardView.swift */,
+				8200178D26AA23C1007F6150 /* PaymentMethodsView.swift */,
 				828A9AE326AAD95C008117B2 /* ProductsServicesView.swift */,
-				828A9AE526AAED5A008117B2 /* PServicesView+AddNew.swift */,
+				82E8E7EF26AC36DE00938EC5 /* EmployeeSalesView.swift */,
+				82E8E7F326AC401800938EC5 /* AppSettingsView.swift */,
 				82E07AD226AA1390007FF98A /* SalesTransactionsView.swift */,
+				828A9AE526AAED5A008117B2 /* PServicesView+AddNew.swift */,
 				8200178526AA1FE8007F6150 /* STView+DatePicker.swift */,
 				8200178926AA2023007F6150 /* STDetailsView.swift */,
-				8200178D26AA23C1007F6150 /* PaymentMethodsView.swift */,
+				82E8E7ED26AC324E00938EC5 /* PMDetailsView.swift */,
 				8239D8C626AB0145002DB4A6 /* Reusable Views */,
 			);
 			path = Views;
@@ -219,7 +231,11 @@
 				8200178A26AA2023007F6150 /* STDetailsView.swift in Sources */,
 				8241048F26AA0E890034085E /* AddAccountView.swift in Sources */,
 				8200178E26AA23C1007F6150 /* PaymentMethodsView.swift in Sources */,
+				82E8E7F026AC36DE00938EC5 /* EmployeeSalesView.swift in Sources */,
+				82E8E7F226AC3AC700938EC5 /* Employee.swift in Sources */,
+				82E8E7EE26AC324E00938EC5 /* PMDetailsView.swift in Sources */,
 				828A9AE626AAED5A008117B2 /* PServicesView+AddNew.swift in Sources */,
+				82E8E7F426AC401800938EC5 /* AppSettingsView.swift in Sources */,
 				82E07AD126AA10E4007FF98A /* DashBoardView.swift in Sources */,
 				8241047B26AA06D60034085E /* PayeerApp.swift in Sources */,
 				8239D8C526AB0117002DB4A6 /* ServiceItem+Category.swift in Sources */,
