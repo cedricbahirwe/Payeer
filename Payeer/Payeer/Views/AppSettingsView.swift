@@ -34,6 +34,7 @@ struct AppSettingsView: View {
                                         subtitle: "Version, etc")
                             .background(Color(.systemBackground))
                     }
+                    .frame(maxHeight: .infinity)
                     
                 }
                 
@@ -87,13 +88,12 @@ struct SettingsRowview: View {
             VStack(alignment: .leading, spacing: 2) {
                 Text(title)
                     .font(.callout)
-                    .fontWeight(.medium)
                 Text(subtitle)
                     .font(.system(size: 13))
                     .foregroundColor(.mainGray)
             }
         }
-        .padding(10)
+        .padding(14)
         .frame(maxWidth: .infinity, alignment: .leading)
         
     }
