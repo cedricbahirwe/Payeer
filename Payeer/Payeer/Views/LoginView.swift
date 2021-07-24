@@ -19,7 +19,8 @@ struct LoginView: View {
                     .resizable()
                     .scaledToFill()
                     .offset(y: -100)
-                    .frame(maxWidth: size.width)
+                    .frame(maxWidth: size.width,
+                           maxHeight: size.height*0.65)
                     .clipped()
                     .overlay(
                         Text("Payeer")
@@ -75,6 +76,7 @@ struct LoginView: View {
                 }
                 .padding(.horizontal, 20)
                 .offset(y: -80)
+                Spacer()
             }
             
         }
