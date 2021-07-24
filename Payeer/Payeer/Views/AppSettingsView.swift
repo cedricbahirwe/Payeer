@@ -13,49 +13,50 @@ struct AppSettingsView: View {
     
     var body: some View {
         NavigationView {
-            VStack {
-                ScrollView(showsIndicators: false) {
-                    VStack(spacing: 0) {
-                        SettingsRowview(icon: "person",
-                                        title: "Personal Settings",
-                                        subtitle: "Account,  Photo, Email & More")
-                        
-                        SettingsRowview(icon: "wallet.pass",
-                                        title: "Payment Account",
-                                        subtitle: "Bank Account, Payment Options")
-                            .background(Color(.systemBackground))
-                        
-                        SettingsRowview(icon: "lock",
-                                        title: "Payment Account",
-                                        subtitle: "Bank Account, Payment Options")
-                        
-                        SettingsRowview(icon: "info.circle",
-                                        title: "About this app",
-                                        subtitle: "Version, etc")
-                            .background(Color(.systemBackground))
-                    }
-                    .frame(maxHeight: .infinity)
+            ScrollView(showsIndicators: false) {
+                VStack(spacing: 0) {
+                    SettingsRowview(icon: "person",
+                                    title: "Personal Settings",
+                                    subtitle: "Account,  Photo, Email & More")
                     
+                    SettingsRowview(icon: "wallet.pass",
+                                    title: "Payment Account",
+                                    subtitle: "Bank Account, Payment Options")
+                        .background(Color(.systemBackground))
+                    
+                    SettingsRowview(icon: "lock",
+                                    title: "Payment Account",
+                                    subtitle: "Bank Account, Payment Options")
+                    
+                    SettingsRowview(icon: "info.circle",
+                                    title: "About this app",
+                                    subtitle: "Version, etc")
+                        .background(Color(.systemBackground))
                 }
+                .frame(maxHeight: .infinity)
                 
-                Spacer()
-                Button(action: {
-                    isLoggedIn = false
-                }) {
-                    Text("Logout")
-                        .bold()
-                        .foregroundColor(isLoggedIn ? .mainBlue : .mainGray)
-                        .frame(maxWidth: .infinity)
-                        .frame(height: 45)
-                        .overlay(Capsule()
-                                    .stroke(isLoggedIn ? Color.mainBlue : .mainGray)
-                        )
-
+                
+            }
+            .background(Color.secondaryBg)
+            .overlay(
+                VStack {
+                    Spacer()
+                    Button(action: {
+                        isLoggedIn = false
+                    }) {
+                        Text("Logout")
+                            .bold()
+                            .foregroundColor(isLoggedIn ? .mainBlue : .mainGray)
+                            .frame(maxWidth: .infinity)
+                            .frame(height: 45)
+                            .overlay(Capsule()
+                                        .stroke(isLoggedIn ? Color.mainBlue : .mainGray)
+                            )
+                        
+                    }
                 }
                 .padding(20)
-            }
-            
-            .background(Color.secondaryBg)
+            )
             .navigationTitle("Settings")
         }
     }

@@ -52,7 +52,7 @@ struct PaymentMethodsView: View {
                 VStack {
                     MainSearchField()
                     
-                    ActionHeaderView(title: "Sales Summary",
+                    ActionHeaderView(title: "Payment Methods",
                                      icon: "slider.vertical.3",
                                      action: {})
                 }

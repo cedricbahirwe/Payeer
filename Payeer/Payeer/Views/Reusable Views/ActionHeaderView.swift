@@ -14,7 +14,7 @@ struct ActionHeaderView: View {
     
     init(title: String,
          icon: String? = nil,
-         action: @escaping() -> Void) {
+         action: @escaping() -> Void = { }) {
         self.title = title
         self.icon = icon
         self.action = action

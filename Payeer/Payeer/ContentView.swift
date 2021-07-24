@@ -61,13 +61,3 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
-
-extension Binding where Value == Bool {
-    func inverted() -> Binding<Bool> {
-        Binding(
-            get: { !wrappedValue },
-            set: { wrappedValue = !$0 }
-        )
-        
-    }
-}

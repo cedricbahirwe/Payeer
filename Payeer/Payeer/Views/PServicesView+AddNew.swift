@@ -14,8 +14,7 @@ struct PSAddNewView: View {
     
     var body: some View {
         VStack(spacing: 0) {
-            NavHeaderView("Add New Service",
-                          lAction: {})
+            NavHeaderView("Add New Service")
             
             Image("placeholder")
                 .resizable()
