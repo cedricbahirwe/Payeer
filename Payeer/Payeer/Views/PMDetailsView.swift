@@ -10,9 +10,8 @@ import SwiftUI
 struct PMDetailsView: View {
     @Environment(\.presentationMode)
     private var presentationMode
-    let transactions:[Transaction] = Transaction.examples
 
-    var payMethod: PaymentMethod
+    let payMethod: PaymentMethod
 
     var body: some View {
         VStack(spacing: 0) {
@@ -43,26 +42,13 @@ struct PMDetailsView: View {
                 .padding(.vertical)
                 .frame(maxWidth: .infinity)
                 .background(Color.secondaryBg)
-            
-            
-            ScrollView {
-                VStack(spacing: 0) {
-                    ForEach(0..<transactions.count) { index in
-                        let transaction = transactions[index]
-                        
-                        TransactionRowView(transaction: transaction)
-                            .padding(8)
-                            .background(
-                                Color.secondaryBg
-                                    .opacity(index % 2 == 0 ? 0 : 1)
-                        )
-                    }
-                }
-            }
+            TransactionsList()
+        
         }
         .navigationTitle("")
         .navigationBarHidden(true)
     }
+
 }
 
 struct PMDetailsView_Previews: PreviewProvider {
@@ -83,5 +69,26 @@ struct LargeAmountLabel: View {
             .minimumScaleFactor(0.6)
             .background(Color.mainBlue)
             .clipShape(Capsule())
+    }
+}
+
+struct TransactionsList: View {
+    let transactions: [Transaction] = Transaction.examples
+
+    var body: some View {
+        ScrollView {
+            VStack(spacing: 0) {
+                ForEach(0..<transactions.count) { index in
+                    let transaction = transactions[index]
+                    
+                    TransactionRowView(transaction: transaction)
+                        .padding(8)
+                        .background(
+                            Color.secondaryBg
+                                .opacity(index % 2 == 0 ? 0 : 1)
+                        )
+                }
+            }
+        }
     }
 }

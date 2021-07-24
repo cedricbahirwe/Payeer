@@ -38,10 +38,10 @@ struct Employee: Identifiable {
     }
     
     let id = UUID()
-    let firstName: String
-    let lastName: String
+    var firstName: String
+    var lastName: String
     let role: EmployeRole
-    let salesAmount: Double
+    var salesAmount: Double
     
     var name: String {
         firstName + " " + lastName

@@ -14,7 +14,7 @@ enum LocalStore {
 
 struct ContentView: View {
     
-    @State private var selection: Int = 4
+    @State private var selection: Int = 1
     @AppStorage(LocalStore.isLoggedIn) var isLoggedIn: Bool = false
     @AppStorage(LocalStore.hasAccount) var hasAccount: Bool = false
     var body: some View {
@@ -37,8 +37,7 @@ struct ContentView: View {
                     Image(systemName: "bag")
                 }
                 .tag(3)
-            LoginView()
-                .onChange(of: isLoggedIn) { selection = $0  ? 1 : 4 }
+            EmployeeSalesView()
                 .tabItem {
                     Image(systemName: "person.2")
                 }
@@ -50,6 +49,10 @@ struct ContentView: View {
                 }
                 .tag(5)
         }
+        .fullScreenCover(isPresented: $isLoggedIn.inverted()){
+            LoginView()
+        }
+        
     }
 }
 
@@ -58,4 +61,3 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
-

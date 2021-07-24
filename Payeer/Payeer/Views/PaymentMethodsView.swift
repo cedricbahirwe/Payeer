@@ -52,7 +52,7 @@ struct PaymentMethodsView: View {
                 VStack {
                     MainSearchField()
                     
-                    ActionHeaderView(title: "Sales Summary",
+                    ActionHeaderView(title: "Payment Methods",
                                      icon: "slider.vertical.3",
                                      action: {})
                 }
@@ -130,33 +130,6 @@ struct PaymentMethodsView: View {
 struct PaymentMethodsView_Previews: PreviewProvider {
     static var previews: some View {
         PaymentMethodsView()
-    }
-}
-
-struct ActionHeaderView: View {
-    let title: String
-    let icon: String?
-    let action: () -> Void
-    
-    init(title: String,
-         icon: String? = nil,
-         action: @escaping() -> Void) {
-        self.title = title
-        self.icon = icon
-        self.action = action
-    }
-    var body: some View {
-        HStack {
-            Text(title)
-                .font(Font.title.weight(.medium))
-            Spacer()
-            if let name = icon {
-                Image(systemName: name)
-                    .imageScale(.large)
-                    .foregroundColor(.mainGray)
-                    .onTapGesture(perform: action)
-            }
-        }
     }
 }
 

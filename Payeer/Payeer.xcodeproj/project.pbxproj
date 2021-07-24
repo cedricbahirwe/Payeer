@@ -12,6 +12,8 @@
 		8200178E26AA23C1007F6150 /* PaymentMethodsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8200178D26AA23C1007F6150 /* PaymentMethodsView.swift */; };
 		8200179026AA2C63007F6150 /* PieSlice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8200178F26AA2C63007F6150 /* PieSlice.swift */; };
 		8200179226AA2C7E007F6150 /* PieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8200179126AA2C7E007F6150 /* PieChartView.swift */; };
+		82083F7526ACA4CB00AF103C /* ESEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82083F7426ACA4CB00AF103C /* ESEditView.swift */; };
+		82083F7726ACA4D200AF103C /* ESDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82083F7626ACA4D200AF103C /* ESDetailsView.swift */; };
 		8239D8C526AB0117002DB4A6 /* ServiceItem+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8239D8C426AB0117002DB4A6 /* ServiceItem+Category.swift */; };
 		8239D8C826AB014C002DB4A6 /* ServiceCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8239D8C726AB014C002DB4A6 /* ServiceCardView.swift */; };
 		8239D8CA26AB030F002DB4A6 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8239D8C926AB030F002DB4A6 /* Transaction.swift */; };
@@ -30,6 +32,9 @@
 		82E8E7F026AC36DE00938EC5 /* EmployeeSalesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E8E7EF26AC36DE00938EC5 /* EmployeeSalesView.swift */; };
 		82E8E7F226AC3AC700938EC5 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E8E7F126AC3AC700938EC5 /* Employee.swift */; };
 		82E8E7F426AC401800938EC5 /* AppSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E8E7F326AC401800938EC5 /* AppSettingsView.swift */; };
+		82E8E7F826AC996900938EC5 /* ActionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E8E7F726AC996900938EC5 /* ActionHeaderView.swift */; };
+		82E8E7FA26ACA07A00938EC5 /* CategoriesDropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E8E7F926ACA07A00938EC5 /* CategoriesDropDown.swift */; };
+		82E8E7FC26ACA08400938EC5 /* NavHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E8E7FB26ACA08400938EC5 /* NavHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +43,8 @@
 		8200178D26AA23C1007F6150 /* PaymentMethodsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMethodsView.swift; sourceTree = "<group>"; };
 		8200178F26AA2C63007F6150 /* PieSlice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieSlice.swift; sourceTree = "<group>"; };
 		8200179126AA2C7E007F6150 /* PieChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartView.swift; sourceTree = "<group>"; };
+		82083F7426ACA4CB00AF103C /* ESEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESEditView.swift; sourceTree = "<group>"; };
+		82083F7626ACA4D200AF103C /* ESDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESDetailsView.swift; sourceTree = "<group>"; };
 		8239D8C426AB0117002DB4A6 /* ServiceItem+Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ServiceItem+Category.swift"; sourceTree = "<group>"; };
 		8239D8C726AB014C002DB4A6 /* ServiceCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCardView.swift; sourceTree = "<group>"; };
 		8239D8C926AB030F002DB4A6 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
@@ -58,6 +65,9 @@
 		82E8E7EF26AC36DE00938EC5 /* EmployeeSalesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeSalesView.swift; sourceTree = "<group>"; };
 		82E8E7F126AC3AC700938EC5 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
 		82E8E7F326AC401800938EC5 /* AppSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingsView.swift; sourceTree = "<group>"; };
+		82E8E7F726AC996900938EC5 /* ActionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionHeaderView.swift; sourceTree = "<group>"; };
+		82E8E7F926ACA07A00938EC5 /* CategoriesDropDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesDropDown.swift; sourceTree = "<group>"; };
+		82E8E7FB26ACA08400938EC5 /* NavHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +81,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		82083F7826ACAC5D00AF103C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8241048C26AA0E4D0034085E /* Extensions.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		8239D8C126AB00F7002DB4A6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -84,9 +102,12 @@
 		8239D8C626AB0145002DB4A6 /* Reusable Views */ = {
 			isa = PBXGroup;
 			children = (
+				8239D8C726AB014C002DB4A6 /* ServiceCardView.swift */,
+				82E8E7F726AC996900938EC5 /* ActionHeaderView.swift */,
+				82E8E7FB26ACA08400938EC5 /* NavHeaderView.swift */,
+				82E8E7F926ACA07A00938EC5 /* CategoriesDropDown.swift */,
 				8200179126AA2C7E007F6150 /* PieChartView.swift */,
 				8200178F26AA2C63007F6150 /* PieSlice.swift */,
-				8239D8C726AB014C002DB4A6 /* ServiceCardView.swift */,
 			);
 			path = "Reusable Views";
 			sourceTree = "<group>";
@@ -112,9 +133,9 @@
 			children = (
 				8241047A26AA06D60034085E /* PayeerApp.swift */,
 				8241047C26AA06D60034085E /* ContentView.swift */,
-				8241048C26AA0E4D0034085E /* Extensions.swift */,
 				8241048B26AA0E3B0034085E /* Views */,
 				8239D8C126AB00F7002DB4A6 /* Models */,
+				82083F7826ACAC5D00AF103C /* Resources */,
 				8241047E26AA06D80034085E /* Assets.xcassets */,
 				8241048326AA06D80034085E /* Info.plist */,
 				8241048026AA06D80034085E /* Preview Content */,
@@ -140,6 +161,8 @@
 				828A9AE326AAD95C008117B2 /* ProductsServicesView.swift */,
 				82E8E7EF26AC36DE00938EC5 /* EmployeeSalesView.swift */,
 				82E8E7F326AC401800938EC5 /* AppSettingsView.swift */,
+				82083F7626ACA4D200AF103C /* ESDetailsView.swift */,
+				82083F7426ACA4CB00AF103C /* ESEditView.swift */,
 				82E07AD226AA1390007FF98A /* SalesTransactionsView.swift */,
 				828A9AE526AAED5A008117B2 /* PServicesView+AddNew.swift */,
 				8200178526AA1FE8007F6150 /* STView+DatePicker.swift */,
@@ -224,14 +247,19 @@
 				8241048A26AA0E2F0034085E /* LoginView.swift in Sources */,
 				8200178626AA1FE8007F6150 /* STView+DatePicker.swift in Sources */,
 				8200179026AA2C63007F6150 /* PieSlice.swift in Sources */,
+				82E8E7F826AC996900938EC5 /* ActionHeaderView.swift in Sources */,
 				82E07AD326AA1390007FF98A /* SalesTransactionsView.swift in Sources */,
 				8239D8CA26AB030F002DB4A6 /* Transaction.swift in Sources */,
+				82083F7526ACA4CB00AF103C /* ESEditView.swift in Sources */,
+				82083F7726ACA4D200AF103C /* ESDetailsView.swift in Sources */,
 				8239D8C826AB014C002DB4A6 /* ServiceCardView.swift in Sources */,
 				8241047D26AA06D60034085E /* ContentView.swift in Sources */,
 				8200178A26AA2023007F6150 /* STDetailsView.swift in Sources */,
 				8241048F26AA0E890034085E /* AddAccountView.swift in Sources */,
 				8200178E26AA23C1007F6150 /* PaymentMethodsView.swift in Sources */,
 				82E8E7F026AC36DE00938EC5 /* EmployeeSalesView.swift in Sources */,
+				82E8E7FC26ACA08400938EC5 /* NavHeaderView.swift in Sources */,
+				82E8E7FA26ACA07A00938EC5 /* CategoriesDropDown.swift in Sources */,
 				82E8E7F226AC3AC700938EC5 /* Employee.swift in Sources */,
 				82E8E7EE26AC324E00938EC5 /* PMDetailsView.swift in Sources */,
 				828A9AE626AAED5A008117B2 /* PServicesView+AddNew.swift in Sources */,
