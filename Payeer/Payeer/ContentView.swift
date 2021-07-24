@@ -7,11 +7,16 @@
 
 import SwiftUI
 
+enum LocalStore {
+    static let isLoggedIn = "isLoggedIn"
+    static let hasAccount = "hasAccount"
+}
+
 struct ContentView: View {
     
-    @State private var selection: Int = 1
-    @AppStorage("isLoggedIn") var isLoggedIn: Bool = false
-    @AppStorage("hasAccount") var hasAccount: Bool = false
+    @State private var selection: Int = 4
+    @AppStorage(LocalStore.isLoggedIn) var isLoggedIn: Bool = false
+    @AppStorage(LocalStore.hasAccount) var hasAccount: Bool = false
     var body: some View {
         TabView(selection: $selection) {
             DashBoardView()
@@ -33,15 +38,15 @@ struct ContentView: View {
                 }
                 .tag(3)
             LoginView()
-                .onChange(of: isLoggedIn) { selection = $0  ? 5 : 4 }
+                .onChange(of: isLoggedIn) { selection = $0  ? 1 : 4 }
                 .tabItem {
-                    Image(systemName: "person.fill")
+                    Image(systemName: "person.2")
                 }
                 .tag(4)
             
-            AddAccountView()
+            AppSettingsView()
                 .tabItem {
-                    Image(systemName: "creditcard.fill")
+                    Image(systemName: "gear")
                 }
                 .tag(5)
         }

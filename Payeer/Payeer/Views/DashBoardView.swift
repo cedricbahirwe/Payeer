@@ -16,11 +16,11 @@ struct SummaryItem: Identifiable {
 struct DashBoardView: View {
     private let summary: [SummaryItem] = [
         
-        .init(name: "Gross Sales", amount: 2509.00),
-        .init(name: "Net Sales", amount: 2509.00),
-        .init(name: "Discounts", amount: 4325.00),
-        .init(name: "Cash Transactions", amount: 545.00),
-        .init(name: "Taxes", amount: 125.00),
+        .init(name: "Gross Sales", amount: 2509),
+        .init(name: "Net Sales", amount: 2509),
+        .init(name: "Discounts", amount: 4325),
+        .init(name: "Cash Transactions", amount: 545),
+        .init(name: "Taxes", amount: 125),
         
     ]
     var body: some View {
@@ -50,14 +50,14 @@ struct DashBoardView: View {
                                 destination: SalesTransactionsView()) {
                                 HStack {
                                     Text(item.name)
-                                        .foregroundColor(.secondary)
+                                        .foregroundColor(.mainGray)
                                     Spacer()
                                     Text(String(format: "$%.2f", item.amount))
                                     
                                 }
                                 .padding()
                                 .background(
-                                    Color(.secondarySystemBackground)
+                                    Color.secondaryBg
                                         .opacity(i%2==0 ? 1 : 0)
                                 )
                             }
@@ -97,9 +97,9 @@ struct MainSearchField: View {
             TextField(placeholder,
                       text: $text)
         }
-        .foregroundColor(.secondary)
+        .foregroundColor(.mainGray)
         .padding(.horizontal, 15)
         .frame(height: 45)
-        .overlay(Capsule().stroke(Color.secondary))
+        .overlay(Capsule().stroke(Color.mainGray))
     }
 }

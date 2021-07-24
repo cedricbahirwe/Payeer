@@ -29,14 +29,14 @@ struct STDetailsView: View {
                 Image(systemName: "square.and.arrow.up")
                     .imageScale(.large)
             }
-            .foregroundColor(.secondary)
+            .foregroundColor(.mainGray)
             .padding(10)
             Divider()
             let transaction = Transaction.examples.first!
             
             TransactionRowView(transaction: transaction)
                 .padding(8)
-                .background(Color(.secondarySystemBackground))
+                .background(Color.secondaryBg)
             
             VStack(alignment: .leading, spacing: 3) {
                 HStack {
@@ -49,7 +49,7 @@ struct STDetailsView: View {
                 Text(transaction.date, style: .date)
                     .font(.callout)
                     .fontWeight(.light)
-                    .foregroundColor(.secondary)
+                    .foregroundColor(.mainGray)
                 
             }
             .padding(8)
@@ -60,13 +60,13 @@ struct STDetailsView: View {
                 Text("Payment Under Contract #D512-3445")
                     .font(.callout)
                     .fontWeight(.regular)
-                    .foregroundColor(.secondary)
+                    .foregroundColor(.mainGray)
                     .opacity(0.8)
                 
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(8)
-            .background(Color(.secondarySystemBackground))
+            .background(Color.secondaryBg)
 
             Map(coordinateRegion: $region, interactionModes: [.zoom])
         }

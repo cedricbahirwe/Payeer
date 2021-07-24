@@ -17,7 +17,7 @@ struct Transaction: Identifiable {
     
     static let examples: [Transaction] = (0..<9).map { number in
         Transaction(title: "Direct Transfer",
-                    amount: 2509.00,
+                    amount: 2509,
                     reference: UUID().uuidString)
     }
 }

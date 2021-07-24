@@ -38,7 +38,7 @@ struct SalesTransactionsView: View {
                                 }
                             }
                     }
-                    .foregroundColor(.secondary)
+                    .foregroundColor(.mainGray)
                     .padding(.vertical)
                 }
                 .padding(.horizontal, 10)
@@ -55,7 +55,7 @@ struct SalesTransactionsView: View {
                                 TransactionRowView(transaction: transaction)
                                     .padding(8)
                                     .background(
-                                        Color(.secondarySystemBackground)
+                                        Color.secondaryBg
                                             .opacity(index % 2 == 0 ? 1 : 0)
                                 )
                             }
@@ -103,11 +103,11 @@ struct TransactionRowView: View {
                 Text(transaction.date, style: .date)
                     .font(.callout)
                     .fontWeight(.light)
-                    .foregroundColor(.secondary)
+                    .foregroundColor(.mainGray)
                 Spacer()
                 
                 Text(transaction.reference.prefix(10))
-                    .foregroundColor(.secondary)
+                    .foregroundColor(.mainGray)
             }
             
         }

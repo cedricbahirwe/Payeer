@@ -9,7 +9,8 @@ import SwiftUI
 
 
 struct LoginView: View {
-    @AppStorage("isLoggedIn") var isLoggedIn: Bool = false
+    @AppStorage(LocalStore.isLoggedIn)
+    private var isLoggedIn: Bool = false
     var body: some View {
         ZStack {
             Color.mainBlue
@@ -79,6 +80,7 @@ struct LoginView: View {
         }
         .foregroundColor(.white)
         .ignoresSafeArea()
+        .statusBar(hidden: true)
         .navigationTitle("")
         .navigationBarHidden(true)
     }

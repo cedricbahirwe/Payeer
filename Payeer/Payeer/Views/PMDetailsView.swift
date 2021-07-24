@@ -33,22 +33,16 @@ struct PMDetailsView: View {
                     Image(systemName: "square.and.arrow.up")
                         .imageScale(.large)
                 }
-                .foregroundColor(.secondary)
+                .foregroundColor(.mainGray)
                 .padding(10)
             }
             .padding(.horizontal, 10)
             
-            Text(String(format: "$%.2f", payMethod.amount))
-                .font(Font.headline)
-                .foregroundColor(.white)
-                .padding(.vertical, 8)
-                .padding(.horizontal, 20)
-                .minimumScaleFactor(0.6)
-                .background(Color.mainBlue)
-                .clipShape(Capsule())
+            LargeAmountLabel(amount: payMethod.amount)
+                
                 .padding(.vertical)
                 .frame(maxWidth: .infinity)
-                .background(Color(.secondarySystemBackground))
+                .background(Color.secondaryBg)
             
             
             ScrollView {
@@ -59,7 +53,7 @@ struct PMDetailsView: View {
                         TransactionRowView(transaction: transaction)
                             .padding(8)
                             .background(
-                                Color(.secondarySystemBackground)
+                                Color.secondaryBg
                                     .opacity(index % 2 == 0 ? 0 : 1)
                         )
                     }
@@ -75,5 +69,19 @@ struct PMDetailsView_Previews: PreviewProvider {
     static let example = PaymentMethod.examples.first!
     static var previews: some View {
         PMDetailsView(payMethod: example)
+    }
+}
+
+struct LargeAmountLabel: View {
+    let amount: Double
+    var body: some View {
+        Text(String(format: "$%.2f", amount))
+            .font(Font.headline)
+            .foregroundColor(.white)
+            .padding(.vertical, 8)
+            .padding(.horizontal, 20)
+            .minimumScaleFactor(0.6)
+            .background(Color.mainBlue)
+            .clipShape(Capsule())
     }
 }

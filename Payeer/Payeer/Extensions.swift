@@ -10,4 +10,7 @@ import SwiftUI
 let size = UIScreen.main.bounds.size
 extension Color {
     static let mainBlue = Color("mainBlue")
+    static let mainGray = Color("mainGray")
+    
+    static let secondaryBg = Color(.secondarySystemBackground)
 }

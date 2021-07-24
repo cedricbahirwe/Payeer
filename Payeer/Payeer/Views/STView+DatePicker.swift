@@ -54,7 +54,7 @@ extension SalesTransactionsView {
                         }) {
                             Text("From")
                                 .bold()
-                                .foregroundColor(startSelected ? .primary : .secondary)
+                                .foregroundColor(startSelected ? .primary : .mainGray)
                                 .frame(maxWidth:.infinity)
                         }
                         Button(action: {
@@ -64,7 +64,7 @@ extension SalesTransactionsView {
                         }) {
                             Text("To")
                                 .bold()
-                                .foregroundColor(!startSelected ? .primary : .secondary)
+                                .foregroundColor(!startSelected ? .primary : .mainGray)
                                 .frame(maxWidth:.infinity)
 
                         }

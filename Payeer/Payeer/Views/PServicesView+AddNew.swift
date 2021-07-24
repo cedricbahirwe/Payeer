@@ -30,7 +30,7 @@ struct PSAddNewView: View {
                     .foregroundColor(.primary)
                 Spacer()
             }
-            .foregroundColor(.secondary)
+            .foregroundColor(.mainGray)
             .padding(10)
             
             Image("placeholder")
@@ -137,7 +137,7 @@ struct CategoriesDropDown: View {
                     Spacer()
                     if self.showDropDown == false {
                         Image(systemName: "chevron.down")
-                            .foregroundColor(.secondary)
+                            .foregroundColor(.mainGray)
                     }
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
