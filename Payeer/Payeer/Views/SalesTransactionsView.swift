@@ -9,7 +9,8 @@ import SwiftUI
 
 struct SalesTransactionsView: View {
     let transactions:[Transaction] = Transaction.examples
-    @Environment(\.presentationMode) private var presentationMode
+    @Environment(\.presentationMode)
+    private var presentationMode
     @State private var showCalendar = false
     var body: some View {
         
@@ -49,12 +50,15 @@ struct SalesTransactionsView: View {
                         ForEach(0..<transactions.count) { index in
                             let transaction = transactions[index]
                             
-                            TransactionRowView(transaction: transaction)
-                                .padding(8)
-                                .background(
-                                    Color(.secondarySystemBackground)
-                                        .opacity(index % 2 == 0 ? 1 : 0.5)
+                            NavigationLink(
+                                destination: STDetailsView()) {
+                                TransactionRowView(transaction: transaction)
+                                    .padding(8)
+                                    .background(
+                                        Color(.secondarySystemBackground)
+                                            .opacity(index % 2 == 0 ? 1 : 0)
                                 )
+                            }
                         }
                     }
                 }
@@ -76,7 +80,9 @@ struct SalesTransactionsView: View {
 
 struct SalesTransactionsView_Previews: PreviewProvider {
     static var previews: some View {
-        SalesTransactionsView()
+        NavigationView{
+            SalesTransactionsView()
+        }
     }
 }
 
@@ -87,6 +93,7 @@ struct TransactionRowView: View {
             HStack {
                 Text(transaction.title)
                     .font(Font.callout.weight(.semibold))
+                    .foregroundColor(.primary)
                 Spacer()
                 Text(String(format: "$%.2f", transaction.amount))
                     .foregroundColor(.mainBlue)

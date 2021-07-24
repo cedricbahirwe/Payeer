@@ -9,7 +9,7 @@ import SwiftUI
 import MapKit
 
 struct STDetailsView: View {
-    @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275), span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5))
+    @State private var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: -1.939484, longitude: 30.074456), span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
 
     @Environment(\.presentationMode) private var presentationMode
     var body: some View {
@@ -68,8 +68,10 @@ struct STDetailsView: View {
             .padding(8)
             .background(Color(.secondarySystemBackground))
 
-            Map(coordinateRegion: .constant(MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 51.507222, longitude: -0.1275), span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5))), interactionModes: [])
+            Map(coordinateRegion: $region, interactionModes: [.zoom])
         }
+        .navigationTitle("")
+        .navigationBarHidden(true)
     }
 }
 

@@ -137,7 +137,6 @@ struct PaymentMethodsView: View {
                     }
                 }
             }
-            Spacer()
         }
         .navigationTitle("")
         .navigationBarHidden(true)
@@ -171,7 +170,7 @@ struct ActionHeaderView: View {
                 Image(systemName: name)
                     .imageScale(.large)
                     .foregroundColor(.secondary)
-                    .onAppear(perform: action)
+                    .onTapGesture(perform: action)
             }
         }
     }
