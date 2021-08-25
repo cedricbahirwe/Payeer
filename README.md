@@ -12,9 +12,11 @@ A simple payment app concept
 ## Special Thanks to:
 
 1. [Esther Carelle](https://github.com/esthcarelle) for her wonderful feedback✨.
-Services                       |  Payment Methods
+
+Services               |  Payment Methods
 :-------------------------:|:-------------------------:
 ![](services.png)  |  ![](methods.png)
+
 
 Employee Edit              |  Transactions Details
 :-------------------------:|:-------------------------:
